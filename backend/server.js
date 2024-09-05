@@ -22,7 +22,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
-// const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, "dist")));
 

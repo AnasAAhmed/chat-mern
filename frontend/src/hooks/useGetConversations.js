@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import {BACK_URL} from "../utils/extractTime";
 
 const useGetConversations = () => {
 	const [loading, setLoading] = useState(false);
@@ -10,7 +9,7 @@ const useGetConversations = () => {
 		const getConversations = async () => {
 			setLoading(true);
 			try {
-				const res = await fetch(`${BACK_URL}/api/users`);
+				const res = await fetch(`${import.meta.env.VITE_BACK_URL}/api/users`);
 				const data = await res.json();
 				if (data.error) {
 					throw new Error(data.error);

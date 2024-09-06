@@ -4,7 +4,6 @@ export function extractTime(dateString) {
 	const minutes = padZero(date.getMinutes());
 	return `${hours}:${minutes}`;
 }
-export const BACK_URL = import.meta.env.VITE_BACK_URL;
 
 // Helper function to pad single-digit numbers with a leading zero
 function padZero(number) {

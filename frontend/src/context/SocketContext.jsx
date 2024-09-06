@@ -1,7 +1,6 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import { useAuthContext } from "./AuthContext";
 import io from "socket.io-client";
-import {BACK_URL} from "../utils/extractTime";
 
 const SocketContext = createContext();
 
@@ -16,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io(BACK_URL, {
+			const socket = io(import.meta.env.VITE_BACK_URL, {
 				query: {
 					userId: authUser._id,
 				},

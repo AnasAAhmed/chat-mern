@@ -22,13 +22,9 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
-const __dirname = path.dirname(__filename);
-
-app.use(express.static(path.join(__dirname, "dist")));
-
 
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./dist/index.html"));
+	res.send("API_WORKING")
 });
 
 

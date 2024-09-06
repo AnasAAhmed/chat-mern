@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useConversation from "../zustand/useConversation";
 import toast from "react-hot-toast";
-import BACK_URL from "../utils/extractTime";
+import {BACK_URL} from "../utils/extractTime";
 
 const useSendMessage = () => {
 	const [loading, setLoading] = useState(false);

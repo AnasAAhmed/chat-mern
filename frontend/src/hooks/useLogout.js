@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuthContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
-import BACK_URL from "../utils/extractTime";
+import {BACK_URL} from "../utils/extractTime";
 
 const useLogout = () => {
 	const [loading, setLoading] = useState(false);

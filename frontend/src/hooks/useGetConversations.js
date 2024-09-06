@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import BACK_URL from "../utils/extractTime";
+import {BACK_URL} from "../utils/extractTime";
 
 const useGetConversations = () => {
 	const [loading, setLoading] = useState(false);
